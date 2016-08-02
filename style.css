@@ -24,6 +24,10 @@ body {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
+.headerMenu :first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
 .headerLogo {
 	display: inline-block;
 	background: url(img/solidworks-red-logo.png);
