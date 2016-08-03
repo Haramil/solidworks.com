@@ -57,17 +57,16 @@ body {
 	box-shadow: 3px 3px 5px -3px;
 }
 .headerLogo {
-	display: inline-block;
+	float: left;
 	background-image: url(img/solidworks-red-logo.png);
 	height: 100%;
 	width: 194px;
 }
 .headerMenuItem {
+	float: left;
 	font-family: "PTSans Bold";
 	font-size: 11pt;
 	color: lightgrey;
-	display: inline-block;
-	vertical-align: top;
 	text-align: center;
 	line-height: 60px;
 	height: 100%;
