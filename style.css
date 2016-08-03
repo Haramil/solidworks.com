@@ -2,12 +2,45 @@ body {
 	background: #F8F8F8;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
+
+/* fonts */
+@font-face {
+    font-family: "HelveticaNeueCyr Thin";
+    src: url("../fonts/helveticaneuecyr-thin-webfont.eot");
+    src: url("../fonts/helveticaneuecyr-thin-webfont.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/helveticaneuecyr-thin-webfont.woff") format("woff"),
+    url("../fonts/helveticaneuecyr-thin-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PTSans Bold";
+    src: url("../fonts/ptsans-bold-webfont.eot");
+    src: url("../fonts/ptsans-bold-webfont.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ptsans-bold-webfont.woff") format("woff"),
+    url("../fonts/ptsans-bold-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PTSans Regular";
+    src: url("../fonts/ptsans-regular-webfont.eot");
+    src: url("../fonts/ptsans-regular-webfont.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ptsans-regular-webfont.woff") format("woff"),
+    url("../fonts/ptsans-regular-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* header style */
 .header {
 	background: url(img/header-background.png);
-	background-position: 50% 50%;
+	background-position: 50% 0%;
     background-repeat: no-repeat; 
-	height: 538px;
 }
 .headerWrapper {
 	margin: 0 auto;
@@ -15,18 +48,10 @@ body {
 	width: 960px;
 }
 .headerMenu {
+	overflow: hidden;
 	height: 60px;
-	text-align: justify;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px -3px;
-}
-.headerMenu :last-child {
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-.headerMenu :first-child {
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
 }
 .headerLogo {
 	display: inline-block;
@@ -35,8 +60,7 @@ body {
 	width: 194px;
 }
 .headerMenuItem {
-	font-family: "PT Sans";
-	font-weight: bold;
+	font-family: "PTSans Bold";
 	font-size: 11pt;
 	color: lightgrey;
 	display: inline-block;
@@ -52,6 +76,36 @@ body {
 	background: white;
 	color: black;
 }
+
+/* slider style */
+.sliderWrapper {
+	float: left;
+	width: 350px;
+}
+.sliderTitle {
+	padding: 50px 0 20px 0;
+	font-family: "HelveticaNeueCyr Thin";
+	font-size: 30pt;
+}
+.sliderText {
+	font-family: "PTSans Regular";
+}
+.sliderMenu {
+
+}
+.sliderPhoto {
+	margin-top: 10px;
+	position: relative;
+	height: 450px;
+	left: 350px;
+	top: 0px;
+	background: url(img/slide1.png);
+	background-position: 0% 0%;
+    background-repeat: no-repeat; 
+    background-attachment: scroll;
+}
+
+/* footer style */
 .footer {
 	background: #1B1B1B;
 }
