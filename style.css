@@ -38,6 +38,7 @@ body {
 
 /* header style */
 .header {
+	position: relative;
 	background: url(img/header-background.png);
 	background-position: 50% 0%;
     background-repeat: no-repeat; 
@@ -49,6 +50,8 @@ body {
 }
 .headerMenu {
 	overflow: hidden;
+	background: url(img/header-menu-item-background.png);
+	background-repeat: repeat-x;
 	height: 60px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px -3px;
@@ -68,8 +71,6 @@ body {
 	text-align: center;
 	line-height: 60px;
 	height: 100%;
-	background: url(img/header-menu-item-background.png);
-	background-repeat: repeat-x;
 	padding: 0 15px;
 }
 .headerMenuItem:hover {
@@ -83,7 +84,7 @@ body {
 	width: 350px;
 }
 .sliderTitle {
-	padding: 50px 0 20px 0;
+	padding: 30px 0 10px 0;
 	font-family: "HelveticaNeueCyr Thin";
 	font-size: 30pt;
 }
@@ -91,7 +92,20 @@ body {
 	font-family: "PTSans Regular";
 }
 .sliderMenu {
-
+	position: absolute;
+	bottom: 50px;
+}
+.sliderMenuItem {
+	vertical-align: middle;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	background: grey;
+	margin-right: 10px;
+}
+.sliderMenuItem.selectedItem {
+	background: white;
+	border: 3px solid red;
 }
 .sliderPhoto {
 	margin-top: 10px;
