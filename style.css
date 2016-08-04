@@ -46,9 +46,10 @@ body {
 .headerWrapper {
 	margin: 0 auto;
 	padding-top: 50px;
-	width: 960px;
+	width: 940px;
 }
 .headerMenu {
+	position: relative;
 	overflow: hidden;
 	background-image: url(img/header-menu-item-background.png);
 	background-repeat: repeat-x;
@@ -57,20 +58,23 @@ body {
 	box-shadow: 3px 3px 5px -3px;
 }
 .headerLogo {
-	float: left;
+	position: absolute;
 	background-image: url(img/solidworks-red-logo.png);
 	height: 100%;
-	width: 194px;
+	width: 200px;
+}
+.headerMenuItems {
+	float: right;
+	display: table;
+	width: 740px;
 }
 .headerMenuItem {
-	float: left;
+	display: table-cell;
 	font-family: "PTSans Bold";
 	font-size: 11pt;
 	color: lightgrey;
 	text-align: center;
 	line-height: 60px;
-	height: 100%;
-	padding: 0 15px;
 }
 .headerMenuItem:hover {
 	background: white;
@@ -107,7 +111,6 @@ body {
 .sliderMenuItem.selectedItem, .sliderMenuItem:hover {
 	box-shadow: 0px 0px 0px 3px rgba(255, 0, 0, 1);  
 	background: lightgrey;
-	border
 }
 .sliderPhoto {
 	margin-top: 10px;
@@ -120,6 +123,25 @@ body {
 	background-position: 0% 0%;
     background-repeat: no-repeat;
     transition: background-image .5s 0s;
+}
+
+/* content style */
+.contentWrapper {
+	margin: 0 auto;
+	width: 940px;
+}
+.leftSideContent {
+	background: white;
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	height: 500px;
+}
+.rightSideContent {
+	background: white;
+	float: left;
+	width: 620px;
+	height: 800px;
 }
 
 /* footer style */
