@@ -1,9 +1,14 @@
 /* generic styles */
+html, body {
+	height: 100%;
+}
 body {
+	position: relative;
 	background: #F8F8F8;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	min-height: 1350px;
 }
 ::selection {
 	color: white;
@@ -163,8 +168,10 @@ body {
 
 /* content style */
 .contentWrapper {
+	overflow: hidden;
 	margin: 0 auto;
 	width: 940px;
+	padding-bottom: 40px;
 }
 .leftSideContent {
 	border-radius: 5px;
@@ -180,8 +187,10 @@ body {
 	background: white;
 	float: left;
 	width: 620px;
-	height: 800px;
+	height: 400px;
 }
+
+/* left side content */
 .mailInputAreaWrapper {
 	position: relative;
 	z-index: 2;
@@ -386,7 +395,13 @@ body {
 	background-image: url(img/in-hover.png); 
 }
 
+/* right side content */
+
 /* footer style */
 .footer {
-	background: #1B1B1B;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #212121;
+	height: 180px;
 }
