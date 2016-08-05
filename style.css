@@ -298,14 +298,17 @@ a {
 	width: 100%;
 	display: inline-block;
 }
+.search, .socialMenuBorder, .shape, .facebook, .vk, .twitter, .in, 
+.facebook-mini, .vk-mini, .twitter-mini, .in-mini {
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	transition: background-image .2s 0s;
+}
 .search {
 	width: 18px;
 	height: 17px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/search-icon.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .search:hover {
 	background-image: url(img/search-icon-hover.png); 
@@ -313,19 +316,12 @@ a {
 .socialMenuBorder {
 	width: 1px;
 	height: 23px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/left-menu-border.png); 
-	background-repeat: no-repeat;
 }
 .shape {
 	width: 17px;
 	height: 16px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/shape.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .shape:hover {
 	background-image: url(img/shape-hover.png); 
@@ -333,11 +329,7 @@ a {
 .facebook {
 	width: 9px;
 	height: 17px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/facebook-logo.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .facebook:hover {
 	background-image: url(img/facebook-logo-hover.png); 
@@ -345,11 +337,7 @@ a {
 .vk {
 	width: 26px;
 	height: 15px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/VK.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .vk:hover {
 	background-image: url(img/VK-hover.png); 
@@ -357,11 +345,7 @@ a {
 .twitter {
 	width: 21px;
 	height: 17px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/twitter.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .twitter:hover {
 	background-image: url(img/twitter-hover.png); 
@@ -369,11 +353,7 @@ a {
 .in {
 	width: 18px;
 	height: 18px;
-	display: inline-block;
-	vertical-align: middle;
 	background-image: url(img/in.png); 
-	background-repeat: no-repeat;
-	transition: background-image .2s 0s;
 }
 .in:hover {
 	background-image: url(img/in-hover.png); 
@@ -435,6 +415,46 @@ a {
 	font-family: "PTSans Regular";
 	font-size: 9pt;
 	color: grey;
+}
+.facebook-mini, .vk-mini, .twitter-mini, .in-mini {
+	margin-left: 5px;
+	margin-top: -3px;
+}
+.facebook-mini {
+	width: 5px;
+	height: 11px;
+	background-image: url(img/facebook-logo-mini.png); 
+}
+.facebook-mini:hover {
+	background-image: url(img/facebook-logo-mini-hover.png); 
+}
+.vk-mini {
+	width: 16px;
+	height: 10px;
+	background-image: url(img/VK-mini.png); 
+}
+.vk-mini:hover {
+	background-image: url(img/VK-mini-hover.png); 
+}
+.twitter-mini {
+	width: 13px;
+	height: 11px;
+	background-image: url(img/twitter-mini.png); 
+}
+.twitter-mini:hover {
+	background-image: url(img/twitter-mini-hover.png); 
+}
+.in-mini {
+	width: 11px;
+	height: 11px;
+	background-image: url(img/in-mini.png); 
+}
+.in-mini:hover {
+	background-image: url(img/in-mini-hover.png); 
+}
+.border-mini {
+	display: inline-block;
+	margin-left: 5px;
 }
 
 /* footer style */
