@@ -10,6 +10,10 @@ body {
 	overflow-x: hidden;
 	min-height: 1350px;
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
 ::selection {
 	color: white;
 	background: #303030; /* Safari */
@@ -104,7 +108,7 @@ body {
 .headerMenuItem:hover {
 	background: white;
 	color: black;
-	cursor: pointer;
+	cursor: default;
 }
 
 /* slider style */
@@ -145,25 +149,12 @@ body {
 	top: 0px;
 	width: 659px;
 	height: 455px;
-	background-position: 0% 0%;
-    background-repeat: no-repeat;
 }
 .sliderPhoto {
 	position: absolute;
-	width: 659px;
-	height: 455px;
+	left: 0;
+	top: 0;
 	transition: opacity .5s 0s;
-}
-.sliderPhoto.sliderPhoto1 {
-	background-image: url(img/slide1.png);
-}
-.sliderPhoto.sliderPhoto2 {
-	background-image: url(img/slide2.png);
-	opacity: 0;
-}
-.sliderPhoto.sliderPhoto3 {
-	background-image: url(img/slide3.png);
-	opacity: 0;
 }
 
 /* content style */
@@ -187,7 +178,7 @@ body {
 	background: white;
 	float: left;
 	width: 620px;
-	height: 400px;
+	overflow: hidden;
 }
 
 /* left side content */
@@ -247,7 +238,6 @@ body {
 	line-height: 50px;
 	vertical-align: middle;
 	transition: background-color .2s 0s;
-	cursor: pointer;
 }
 .leftSideContentMenuItem:after {
 	content: '';
@@ -315,7 +305,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/search-icon.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .search:hover {
@@ -336,7 +325,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/shape.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .shape:hover {
@@ -349,7 +337,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/facebook-logo.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .facebook:hover {
@@ -362,7 +349,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/VK.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .vk:hover {
@@ -375,7 +361,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/twitter.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .twitter:hover {
@@ -388,7 +373,6 @@ body {
 	vertical-align: middle;
 	background-image: url(img/in.png); 
 	background-repeat: no-repeat;
-	cursor: pointer;
 	transition: background-image .2s 0s;
 }
 .in:hover {
@@ -396,6 +380,62 @@ body {
 }
 
 /* right side content */
+.contentBlock {
+	float: left;
+	width: 260px;
+	margin: 25px 5px 0px 30px;
+}
+.titleBlock {
+	text-align: justify;
+}
+.titleBlock:after {
+	content: '';
+	display: inline-block;
+	background: red;
+	width: 100%;
+	height: 2px;
+}
+.contentTitle {
+	display: inline-block;
+	font-family: "HelveticaNeueCyr Thin";
+	font-size: 16pt;
+}
+.contentAll {
+	display: inline-block;
+	font-family: "PTSans Regular";
+	font-size: 8pt;
+	text-transform: uppercase;
+	color: grey;
+}
+.contentAll:hover {
+	text-decoration: underline;
+}
+.contentTextBlock {
+	padding: 20px 0 20px 0;
+	position: relative;
+	border-bottom: 1px solid lightgrey;
+}
+.contentBlock :last-child {
+	border: none;
+}
+.contentTextBlockTitle {
+	font-family: "PTSans Regular";
+	font-size: 11pt;
+}
+.contentTextBlockTitle:hover {
+	color: maroon;
+}
+.contentTextBlockDate {
+	padding: 5px 0 5px 0;
+	font-family: "PTSans Italic";
+	font-size: 9pt;
+	color: lightgrey;
+}
+.contentTextBlockDescription {
+	font-family: "PTSans Regular";
+	font-size: 9pt;
+	color: grey;
+}
 
 /* footer style */
 .footer {
