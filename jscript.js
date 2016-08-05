@@ -1,5 +1,9 @@
 function slide(item, element) {
 	document.getElementsByClassName("selectedItem")[0].className = "sliderMenuItem";
 	element.className += " selectedItem";
-	document.getElementsByClassName("sliderPhoto")[0].style["background-image"] = "url(img/slide" + item + ".png)";
+	var photos = document.getElementsByClassName("sliderPhoto")
+	for (var i = 0; i < photos.length; i++) {
+		if (i + 1 == item) photos[i].style.opacity = 1;
+		else photos[i].style.opacity = 0;
+	}
 }
