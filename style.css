@@ -99,7 +99,7 @@ a {
 .headerMenuItem {
 	display: table-cell;
 	font-family: "PTSans Bold";
-	font-size: 11pt;
+	font-size: 10pt;
 	color: lightgrey;
 	text-align: center;
 	line-height: 60px;
@@ -256,7 +256,8 @@ a {
 	width: 17px;
 	height: 16px;
 	margin-right: 10px;
-	transition: background-image .2s 0s;
+	opacity: .4;
+	transition: opacity .2s 0s;
 }
 .leftSideContentMenuImage.Image1 {
 	background-image: url(img/left-menu-image1.png);
@@ -273,17 +274,8 @@ a {
 .leftSideContentMenuItem:hover {
 	background-color: #F0F0F0;
 }
-.leftSideContentMenuItem:hover>.leftSideContentMenuImage.Image1 {
-	background-image: url(img/left-menu-image1-hover.png);
-}
-.leftSideContentMenuItem:hover>.leftSideContentMenuImage.Image2 {
-	background-image: url(img/left-menu-image2-hover.png);
-}
-.leftSideContentMenuItem:hover>.leftSideContentMenuImage.Image3 {
-	background-image: url(img/left-menu-image3-hover.png);
-}
-.leftSideContentMenuItem:hover>.leftSideContentMenuImage.Image4 {
-	background-image: url(img/left-menu-image4-hover.png);
+.leftSideContentMenuItem:hover>.leftSideContentMenuImage {
+	opacity: 1;
 }
 .leftSideContentBottomMenu {
 	text-align: justify;
@@ -304,15 +296,17 @@ a {
 	display: inline-block;
 	background-repeat: no-repeat;
 	vertical-align: middle;
-	transition: background-image .2s 0s;
+	transition: opacity .2s 0s;
+	opacity: .4;
+}
+.search:hover, .socialMenuBorder:hover, .shape:hover, .facebook:hover, .vk:hover, .twitter:hover, .in:hover, 
+.facebook-mini:hover, .vk-mini:hover, .twitter-mini:hover, .in-mini:hover {
+	opacity: 1;
 }
 .search {
 	width: 18px;
 	height: 17px;
 	background-image: url(img/search-icon.png); 
-}
-.search:hover {
-	background-image: url(img/search-icon-hover.png); 
 }
 .socialMenuBorder {
 	width: 1px;
@@ -324,40 +318,25 @@ a {
 	height: 16px;
 	background-image: url(img/shape.png); 
 }
-.shape:hover {
-	background-image: url(img/shape-hover.png); 
-}
 .facebook {
 	width: 9px;
 	height: 17px;
 	background-image: url(img/facebook-logo.png); 
-}
-.facebook:hover {
-	background-image: url(img/facebook-logo-hover.png); 
 }
 .vk {
 	width: 26px;
 	height: 15px;
 	background-image: url(img/VK.png); 
 }
-.vk:hover {
-	background-image: url(img/VK-hover.png); 
-}
 .twitter {
 	width: 21px;
 	height: 17px;
 	background-image: url(img/twitter.png); 
 }
-.twitter:hover {
-	background-image: url(img/twitter-hover.png); 
-}
 .in {
 	width: 18px;
 	height: 18px;
 	background-image: url(img/in.png); 
-}
-.in:hover {
-	background-image: url(img/in-hover.png); 
 }
 
 /* right side content */
@@ -426,32 +405,20 @@ a {
 	height: 11px;
 	background-image: url(img/facebook-logo-mini.png); 
 }
-.facebook-mini:hover {
-	background-image: url(img/facebook-logo-mini-hover.png); 
-}
 .vk-mini {
 	width: 16px;
 	height: 10px;
 	background-image: url(img/VK-mini.png); 
-}
-.vk-mini:hover {
-	background-image: url(img/VK-mini-hover.png); 
 }
 .twitter-mini {
 	width: 13px;
 	height: 11px;
 	background-image: url(img/twitter-mini.png); 
 }
-.twitter-mini:hover {
-	background-image: url(img/twitter-mini-hover.png); 
-}
 .in-mini {
 	width: 11px;
 	height: 11px;
 	background-image: url(img/in-mini.png); 
-}
-.in-mini:hover {
-	background-image: url(img/in-mini-hover.png); 
 }
 .border-mini {
 	display: inline-block;
@@ -467,10 +434,96 @@ a {
 	height: 180px;
 }
 .phonesBlock {
-	background-image: url(img/phones-block-background.png);
-	background-repeat: repeat-x;
+	position: relative;
 	height: 84px;
 	width: 100%;
 	margin-top: 7px;
+	background-image: url(img/phones-block-background.png);
+	background-repeat: repeat-x;
 	box-shadow: 0 0 6px 0;
+}
+.phonesBlockWrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 940px;
+	overflow: hidden;
+	font-family: "PTSans Regular";
+	font-size: 9pt;
+}
+.footerWrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 940px;
+	overflow: hidden;
+}
+.solidWorksLogo {
+	float: left;
+	background-image: url(img/solidworks-logo.png);
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 40px;
+	border-right: 1px solid #4B4B4B;
+}
+.phoneBlock {
+	float: left;
+	margin: -4px 20px 0px 25px;
+	width: 105px;
+}
+.phoneBlockCity {
+	color: grey;
+}
+.phoneBlockPhone {
+	color: #A0A0A0;
+}
+.itechGroupBlock {
+	float: right;
+	width: 105px;
+	color: #505050;
+	margin: -4px 0px 0px 0px;
+}
+.itechGroupBlock:hover .itechGroupLogoBlock {
+	box-shadow: 0 0 30px 10px #EA2520 inset;
+}
+.itechGroupBlock:hover .itechGroupLogo {
+	opacity: 1;
+}
+.itechGroupBlockText {
+	float: left;
+	text-align: right;
+	width: 60px;
+}
+.itechGroupLogoBlock {
+	float: right;
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+	box-shadow: 0 0 30px 10px #101010 inset;
+	transition: box-shadow .2s 0s;
+}
+.itechGroupLogo {
+	margin: 7px 8px;
+	opacity: .4;
+	transition: opacity .2s 0s;
+}
+.solidWorksLink {
+	float: left;
+	width: 160px;
+	font-family: "PTSans Bold";
+	font-size: 11pt;
+	color: grey;
+	opacity: .5;
+	text-decoration: underline;
+	transition: opacity .2s 0s;
+}
+.solidWorksLink:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+.solidWorksFooterText {
+	float: left;
+	width: 780px;
+	font-family: "PTSans Italic";
+	font-size: 9pt;
+	color: #505050;
 }
