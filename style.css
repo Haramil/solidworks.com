@@ -117,8 +117,8 @@ a {
 /* boxes */
 .boxes {
 	position: absolute;
-	left: -10px;
-	top: -60px;
+	left: -30px;
+	top: -80px;
 	background-image: url(img/boxes.png);
 	background-repeat: no-repeat;
 	background-position: 0% 0%;
