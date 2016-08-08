@@ -171,11 +171,13 @@ a {
 	position: absolute;
 	left: 0;
 	top: 0;
-	transition: opacity .5s 0s;
+	transition: opacity .5s 0s, visibility .5s 0s;
 	opacity: 0;
+	visibility: hidden;
 }
 .sliderPhoto.visiblePhoto {
 	opacity: 1;
+	visibility: visible;
 }
 
 /* content style */
@@ -328,7 +330,8 @@ a {
 .search {
 	width: 18px;
 	height: 17px;
-	background-image: url(img/search-icon.png); 
+	background-image: url(img/search-icon.png);
+	cursor: pointer;
 }
 .socialMenuBorder {
 	width: 1px;
@@ -363,9 +366,31 @@ a {
 .openedSearchMenu {
 	background: inherit;
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	padding: 20px 50px 5px 50px;
+	top: 15px;
+	left: 25px;
+	background: #F8F8F8;
+	width: 220px;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 25px;
+	padding-top: 5px;
+	transition: opacity .5s 0s, visibility .5s 0s;
+	opacity: 0;
+	visibility: hidden;
+}
+.openedSearchMenu.opened {
+	opacity: 1;
+	visibility: visible;
+}
+.searchInput {
+	display: inline-block;
+	font-family: "PTSans Italic";
+	font-size: 11pt;
+	background: transparent;
+	border: none;
+	outline: none;
+	width: 135px;
+	margin-left: 10px;
 }
 
 /* right side content */
