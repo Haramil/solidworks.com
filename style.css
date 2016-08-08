@@ -72,9 +72,11 @@ a {
     background-repeat: no-repeat; 
 }
 .headerWrapper {
+	position: relative;
 	margin: 0 auto;
 	padding-top: 50px;
 	width: 940px;
+	z-index: 2;
 }
 .headerMenu {
 	position: relative;
@@ -110,6 +112,19 @@ a {
 	background: white;
 	color: black;
 	cursor: default;
+}
+
+/* boxes */
+.boxes {
+	position: absolute;
+	left: -10px;
+	top: -60px;
+	background-image: url(img/boxes.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	width: 1387px;
+	height: 656px;
+	z-index: 1;
 }
 
 /* slider style */
@@ -150,6 +165,7 @@ a {
 	top: 0px;
 	width: 659px;
 	height: 455px;
+	z-index: 2;
 }
 .sliderPhoto {
 	position: absolute;
