@@ -172,6 +172,10 @@ a {
 	left: 0;
 	top: 0;
 	transition: opacity .5s 0s;
+	opacity: 0;
+}
+.sliderPhoto.visiblePhoto {
+	opacity: 1;
 }
 
 /* content style */
@@ -294,12 +298,14 @@ a {
 	opacity: 1;
 }
 .leftSideContentBottomMenu {
+	background: inherit;
 	text-align: justify;
-	border-top: 2px solid lightgrey;
+	border-top: 1px solid lightgrey;
 	position: relative;
 	z-index: 2;
 	margin-top: -1px;
 	padding: 20px 50px 5px 50px;
+	box-shadow: 0 -2px 20px -10px;
 }
 .leftSideContentBottomMenu:after {
 	content: '';
@@ -353,6 +359,13 @@ a {
 	width: 18px;
 	height: 18px;
 	background-image: url(img/in.png); 
+}
+.openedSearchMenu {
+	background: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 20px 50px 5px 50px;
 }
 
 /* right side content */

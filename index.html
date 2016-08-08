@@ -4,7 +4,8 @@
 		<title>SolidWorks Russia</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		<script src="jscript.js"></script>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script src="slider.js"></script>
 	</head>
 	<body>
 		<div class="boxes"></div>
@@ -31,15 +32,15 @@
 						Компания SolidWorks Russia является одним из крупнейших поставщиков программных комплексов CAD/CAM/CAE/PLM и инжиниринговых услуг Российской Федерации и стран СНГ
 					</div>
 					<div class="sliderMenu">
-						<div class="sliderMenuItem selectedItem" onclick="slide(1, this)"></div>
-						<div class="sliderMenuItem" onclick="slide(2, this)"></div>
-						<div class="sliderMenuItem" onclick="slide(3, this)"></div>
+						<div class="sliderMenuItem selectedItem" id="i1"></div>
+						<div class="sliderMenuItem" id="i2"></div>
+						<div class="sliderMenuItem" id="i3"></div>
 					</div>
 				</div>
 				<div class="sliderPhotoContainer">
-					<img class="sliderPhoto" src="img/slide1.png"></img>
-					<img class="sliderPhoto" src="img/slide2.png" style="opacity: 0;"></img>
-					<img class="sliderPhoto" src="img/slide3.png" style="opacity: 0;"></img>
+					<img class="sliderPhoto visiblePhoto" id="p1" src="img/slide1.png"></img>
+					<img class="sliderPhoto" id="p2" src="img/slide2.png"></img>
+					<img class="sliderPhoto" id="p3" src="img/slide3.png"></img>
 				</div>
 			</div>
 		</div>
@@ -68,13 +69,16 @@
 					Задать вопрос
 				</div></a>
 				<div class="leftSideContentBottomMenu">
-					<a class="search" href="#search"></a>
+					<div class="search"></div>
 					<div class="socialMenuBorder"></div>
 					<a class="shape" href="#shape"></a>
 					<a class="facebook" href="#facebook"></a>
 					<a class="vk" href="#vk"></a>
 					<a class="twitter" href="#twitter"></a>
 					<a class="in" href="#in"></a>
+					<div class="openedSearchMenu">
+						<div class="search"></div>
+					</div>
 				</div>
 			</div>
 			<div class="rightSideContent">
