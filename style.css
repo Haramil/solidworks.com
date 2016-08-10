@@ -80,23 +80,27 @@ a {
 }
 .headerMenu {
 	position: relative;
-	overflow: hidden;
-	background-image: url(img/header-menu-item-background.png);
-	background-repeat: repeat-x;
 	height: 60px;
-	border-radius: 5px;
-	box-shadow: 3px 3px 5px -3px;
+	z-index: 3;
+}
+.headerMenuItems .headerMenuItem:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 .headerLogo {
-	position: absolute;
+	display: table-cell;
 	background-image: url(img/solidworks-red-logo.png);
-	height: 100%;
 	width: 200px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 .headerMenuItems {
-	float: right;
 	display: table;
-	width: 740px;
+	width: 940px;
+	box-shadow: 0 5px 10px -5px black;
+	background-image: url(img/header-menu-item-background.png);
+	background-repeat: repeat-x;
+	border-radius: 5px;
 }
 .headerMenuItem {
 	display: table-cell;
@@ -106,12 +110,37 @@ a {
 	text-align: center;
 	line-height: 60px;
 	text-transform: uppercase;
+	white-space: nowrap;
 	transition: background-color .2s 0s, color .2s 0s;
+	cursor: default;
 }
 .headerMenuItem:hover {
 	background: white;
 	color: black;
-	cursor: default;
+}
+a.headerMenuItem:hover {
+	cursor: pointer;
+}
+.headerItemSubMenu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 400px;
+	width: 940px;
+	margin-top: 5px;
+	background: white;
+	z-index: -2;
+	opacity: 0;
+	visibility: hidden;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	transition: opacity .2s 0s, visibility .2s 0s, margin .2s 0s;
+	box-shadow: 0 5px 10px -5px black;
+}
+.headerMenuItem:hover>.headerItemSubMenu {
+	opacity: 1;
+	visibility: visible;
+	margin-top: 55px;
 }
 
 /* boxes */
